@@ -74,7 +74,7 @@ LINK = $(CCLD) $(AM_CFLAGS) $(CFLAGS) $(AM_LDFLAGS) $(LDFLAGS) -o $@
 CXXCOMPILE = $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) \
 	$(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS)
 CXXLD = $(CXX)
-CXXLINK = $(CXXLD) $(AM_CXXFLAGS) $(CXXFLAGS) $(AM_LDFLAGS) $(LDFLAGS) \
+CXXLINK = $(CXXLD) $(AM_CXXFLAGS) $(CXXFLAGS) $(LDFLAGS) \
 	-o $@
 SOURCES = $(flaim_core_SOURCES)
 DIST_SOURCES = $(flaim_core_SOURCES)
@@ -283,7 +283,7 @@ clean-binPROGRAMS:
 	-test -z "$(bin_PROGRAMS)" || rm -f $(bin_PROGRAMS)
 flaim-core$(EXEEXT): $(flaim_core_OBJECTS) $(flaim_core_DEPENDENCIES) 
 	@rm -f flaim-core$(EXEEXT)
-	$(CXXLINK) $(flaim_core_OBJECTS) $(flaim_core_LDADD) $(LIBS)
+	$(CXXLINK) $(flaim_core_OBJECTS) $(flaim_core_LDADD) $(LIBS) $(AM_LDFLAGS)
 install-binSCRIPTS: $(bin_SCRIPTS)
 	@$(NORMAL_INSTALL)
 	test -z "$(bindir)" || $(MKDIR_P) "$(DESTDIR)$(bindir)"
