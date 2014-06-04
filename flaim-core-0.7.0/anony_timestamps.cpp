@@ -40,6 +40,7 @@
 #include "time_enum.h"
 #include <stdint.h>
 #include <cassert>
+#include <climits>
 
 // if an iterator is invalid because it is not part of a collection (i.e.,
 // dereferenceable or past-the-end), its increment/decrement operations are

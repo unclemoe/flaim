@@ -41,6 +41,8 @@
 #include <iostream>
 #include <string>
 #include "value_types.h"
+#include <stdio.h>
+#include <cstring>
 
 using namespace std;
 

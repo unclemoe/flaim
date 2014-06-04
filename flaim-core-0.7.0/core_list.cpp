@@ -43,6 +43,7 @@
 #include "core_list.h"
 #include "listed_record.h"
 #include <stdint.h>
+#include <cstdlib>
 
 extern bool verbose;
 
