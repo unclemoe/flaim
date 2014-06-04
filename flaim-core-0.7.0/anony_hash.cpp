@@ -36,7 +36,7 @@
 #include "anony_algos.hpp"
 #include "core_globals.h"
 #include <openssl/sha.h>
-#include <openssl/md2.h>
+/*#include <openssl/md2.h>*/
 #include <openssl/ripemd.h>
 
 
@@ -92,12 +92,12 @@ Hash::Hash(vector<string>& param_names, vector<string>& param_values)
         // EVP_md2(), EVP_md5(), EVP_sha(), EVP_sha1(), EVP_sha224(), EVP_sha256(),
         // EVP_sha384(), EVP_sha512() and EVP_ripemd160()
         if (param_names[i] == Hash::typeParam) {
-            if (param_values[i] == "MD2") { // 128
+/*            if (param_values[i] == "MD2") { // 128
                 Hash::hashType = HASHTYPE_MD2;
                 Hash::evpHashFunc = &EVP_md2;
                 Hash::hashFunc = &MD2;
             }
-            else if (param_values[i] == "MD5") { // 128
+            else*/ if (param_values[i] == "MD5") { // 128
                 Hash::hashType = HASHTYPE_MD5;
                 Hash::evpHashFunc = &EVP_md5;
                 Hash::hashFunc = &MD5;

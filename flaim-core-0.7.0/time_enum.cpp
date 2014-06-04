@@ -1,4 +1,5 @@
 #include "time_enum.h"
+#include <limits>
 
 simpRecord::simpRecord(uint32_t sn, uint32_t v, listedRecord *recArg) {
 	seq_no = sn;
